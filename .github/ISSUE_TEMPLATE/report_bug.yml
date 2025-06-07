@@ -31,8 +31,8 @@ body:
       description: Is SourceMod installed and running on the server?
       multiple: false
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: checkboxes
