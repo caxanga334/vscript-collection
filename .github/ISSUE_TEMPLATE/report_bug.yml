@@ -37,7 +37,7 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: "Confirm the following questions:"
+      label: "Confirm the following:"
       options:
         - label: I have updated to the latest version and the issue still persists.
   - type: textarea

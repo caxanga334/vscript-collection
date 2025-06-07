@@ -1,0 +1,22 @@
+﻿name: Script Request
+description: Request a script to be made.
+title: "[Request]: "
+labels: ["request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Requested scripts will be public and there is no ETA on when they will be published.
+        I work on these request when I have free time.
+        This is for requesting [vscript](https://developer.valvesoftware.com/wiki/VScript) scripts, not [SourceMod](https://www.sourcemod.net/) plugins.
+  - type: input
+    attributes:
+      label: Game/Mod
+      description: |
+                For which game/mod would this script be?
+                The game/mod must have support for vscript.
+      placeholder: Team Fortress 2
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe your request here.
