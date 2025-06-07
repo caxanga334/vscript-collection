@@ -79,10 +79,6 @@ GBW_DemomanMelee <- [
 		item = 474
 	},
 	{
-		classname = "tf_weapon_bottle"
-		item = 739
-	},
-	{
 		classname = "tf_weapon_sword"
 		item = 482
 	},

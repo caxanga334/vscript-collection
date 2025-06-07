@@ -1,0 +1,62 @@
+﻿name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the requested information and provide a clear description with reproduction steps if possible.
+  - type: input
+    attributes:
+      label: Game/Mod name
+      description: Name of the game/mod you're running.
+      placeholder: Team Fortress 2
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Server Type
+      description: Type of the game server you're running.
+      multiple: false
+      options:
+        - Listen Server
+        - Dedicated Server
+    validations:
+      required: true
+  - type: dropdown
+    id: sm-installed
+    attributes:
+      label: Is SourceMod installed?
+      description: Is SourceMod installed and running on the server?
+      multiple: false
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: "Confirm the following questions:"
+      options:
+        - label: I have updated to the latest version and the issue still persists.
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe the bug here.
+      placeholder: X isn't working when I do Y.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Provide the steps needed to reproduce the bug.
+      placeholder: |
+                  Do this
+                  Do that
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Additional Information
+      description: Any additional information you want to share such as links to screenshots, video recordings, etc.
