@@ -11,3 +11,16 @@ Script that gives bots random weapons on spawn.
 ## Usage
 
 Run `script_execute givebotweapons.nut` once per map.
+
+## Compatibility
+
+Should be compatible with most bots.    
+Officially tested with TFBots and [NavBot](https://github.com/caxanga334/NavBot).
+
+Bots may have difficulty using certain weapons.    
+TFBots are the least compatible with non-stock weapons.    
+This script automatically skips BLU team bots on Mann vs Machine game mode.
+
+## Conflicts
+
+This script's functions have a unique prefix to avoid conflicts with other scripts.

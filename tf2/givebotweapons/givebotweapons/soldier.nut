@@ -26,6 +26,10 @@ GBW_SoldierPrimaries <- [
 		item = 513
 	},
 	{
+		classname = "tf_weapon_rocketlauncher"
+		item = 730
+	},
+	{
 		classname = "tf_weapon_rocketlauncher_airstrike"
 		item = 1104
 	},

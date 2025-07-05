@@ -1,0 +1,15 @@
+﻿name: Feature Request
+description: Request a feature on an existing script.
+title: "[Feature Request]: "
+labels: ["request"]
+body:
+  - type: input
+    attributes:
+      label: Script Name
+      description: |
+                Name of the script you're requesting a feature for.
+      placeholder: Team Fortress 2
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe your request here.
