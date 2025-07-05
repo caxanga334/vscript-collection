@@ -44,8 +44,28 @@ GBW_SniperSecondaries <- [
 		item = -1
 	},
 	{
+		classname = "tf_wearable_razorback"
+		item = 57
+		// if iswearable is present, will spawn the item as an wearable instead of an weapon
+		iswearable = true
+		// slot is only needed for wearable entities, used to remove any weapons in this slot
+		slot = 1
+	},
+	{
 		classname = "tf_weapon_jar"
 		item = 58
+	},
+	{
+		classname = "tf_wearable"
+		item = 231
+		iswearable = true
+		slot = 1
+	},
+	{
+		classname = "tf_wearable"
+		item = 642
+		iswearable = true
+		slot = 1
 	},
 	{
 		classname = "tf_weapon_charged_smg"

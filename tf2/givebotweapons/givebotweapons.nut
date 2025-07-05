@@ -1,5 +1,6 @@
 ::ROOT  <- getroottable()
 
+IncludeScript("givebotweapons/config", ROOT)
 IncludeScript("givebotweapons/utils", ROOT)
 IncludeScript("givebotweapons/scout", ROOT)
 IncludeScript("givebotweapons/soldier", ROOT)
@@ -13,6 +14,12 @@ IncludeScript("givebotweapons/spy", ROOT)
 
 ::GBW_GenerateAndEquipWeapons <- function(bot)
 {
+	// This prevents an infinite loop when manually firing the post_inventory_application game event
+	GBW_gIsGivingItems = true
+	// clean up any wearables that was previously added by us
+	// note: wearables are removed automatically by the game when the player/bot disconnects
+	GBW_CleanUpPlayerWearables(bot)
+
 	if (bot.GetTeam() <= Constants.ETFTeam.TEAM_SPECTATOR)
 	{
 		return
@@ -65,6 +72,20 @@ IncludeScript("givebotweapons/spy", ROOT)
 	{
 		GBW_CreateSpyInventory(bot)
 	}
+
+	if (GBW_gRecalculateBodyGroups == true)
+	{
+		SendGlobalGameEvent("post_inventory_application", { userid = GBW_GetPlayerUserID(bot) })
+	}
+
+	if (GBW_gCleanUpDroppedWeapons == true && GBW_gCleanUpTimerIsActive == false)
+	{
+		GBW_gCleanUpTimerIsActive = true
+		EntFire("worldspawn", "CallScriptFunction", "GBW_DoCleanUpDroppedWeapons", 0.1)
+	}
+
+	GBW_gRecalculateBodyGroups = false
+	GBW_gIsGivingItems = false
 }
 
 if ("GBW_GameEvents" in ROOT)
@@ -82,7 +103,7 @@ function GBW_HookGameEvents()
 	{
 		local player = GetPlayerFromUserID(params.userid)
 
-		if (player.IsFakeClient())
+		if (GBW_gIsGivingItems == false && player.IsFakeClient())
 		{
 			::GBW_GenerateAndEquipWeapons(player)
 		}

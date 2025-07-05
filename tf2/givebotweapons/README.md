@@ -12,6 +12,10 @@ Script that gives bots random weapons on spawn.
 
 Run `script_execute givebotweapons.nut` once per map.
 
+## Configs
+
+See `givebotweapons/config.nut`.
+
 ## Compatibility
 
 Should be compatible with most bots.    

@@ -9,6 +9,18 @@ GBW_DemomanPrimaries <- [
 		item = 308
 	},
 	{
+		classname = "tf_wearable"
+		item = 405
+		iswearable = true
+		slot = 1
+	},
+	{
+		classname = "tf_wearable"
+		item = 608
+		iswearable = true
+		slot = 1
+	},
+	{
 		classname = "tf_weapon_cannon"
 		item = 996
 	},
@@ -26,6 +38,24 @@ GBW_DemomanSecondaries <- [
 	{
 		classname = "tf_weapon_pipebomblauncher"
 		item = 130
+	},
+	{
+		classname = "tf_wearable_demoshield"
+		item = 131
+		iswearable = true
+		slot = 1
+	},
+	{
+		classname = "tf_wearable_demoshield"
+		item = 406
+		iswearable = true
+		slot = 1
+	},
+	{
+		classname = "tf_wearable_demoshield"
+		item = 1099
+		iswearable = true
+		slot = 1
 	},
 ]
 

@@ -45,6 +45,12 @@ GBW_SoldierSecondaries <- [
 		item = 129
 	},
 	{
+		classname = "tf_wearable"
+		item = 133
+		iswearable = true
+		slot = 1
+	},
+	{
 		classname = "tf_weapon_buff_item"
 		item = 226
 	},
@@ -59,6 +65,12 @@ GBW_SoldierSecondaries <- [
 	{
 		classname = "tf_weapon_raygun"
 		item = 442
+	},
+	{
+		classname = "tf_wearable"
+		item = 444
+		iswearable = true
+		slot = 1
 	},
 	{
 		classname = "tf_weapon_shotgun_soldier"
