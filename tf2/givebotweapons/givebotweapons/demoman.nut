@@ -12,13 +12,13 @@ GBW_DemomanPrimaries <- [
 		classname = "tf_wearable"
 		item = 405
 		iswearable = true
-		slot = 1
+		slot = 0
 	},
 	{
 		classname = "tf_wearable"
 		item = 608
 		iswearable = true
-		slot = 1
+		slot = 0
 	},
 	{
 		classname = "tf_weapon_cannon"
